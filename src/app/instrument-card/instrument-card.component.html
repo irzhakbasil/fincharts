@@ -1,0 +1,26 @@
+@if (instrumentWithUpdates?.updates) {
+    <div class="instrument-card">
+        <button class="unsubscribe-button" (click)="unsubscribe()">x</button>
+        <div class="card-header">
+            <div class="header-section">
+                <span class="item-header">Symbol</span>
+                <span>{{instrumentWithUpdates?.symbol}}</span>
+            </div>
+            <div class="header-section">
+                <span class="item-header">Price</span>
+                <span>${{instrumentWithUpdates?.updates?.bid?.price}}</span>
+            </div>
+            <div class="header-section">
+                <span class="item-header">Time</span>
+                <span>{{instrumentWithUpdates?.updates?.bid?.timestamp | date}}</span>
+            </div>
+        </div>
+        <ng-content></ng-content>
+    </div>
+} @else {
+    <div class="instrument-card">
+        <div class="instrument-card-placeholder">
+            <span>some placeholder</span>
+        </div>
+    </div>
+}

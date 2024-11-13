@@ -1,0 +1,12 @@
+{
+  "/identity": {
+    "target": "https://platform.fintacharts.com",
+    "secure": true,
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://platform.fintacharts.com",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
